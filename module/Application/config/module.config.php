@@ -8,6 +8,32 @@
  */
 
 return array(
+    'asset_manager' => array(
+        'resolver_configs' => array(
+            'collections' => array(
+                'js/e.js' => array(
+                    'js/a.js',
+                    'js/b.js',
+                ),
+                'js/f.js' => array(
+                    'js/c.js',
+                    'js/d.js',
+                ),
+
+            ),
+            'paths' => array(
+                __DIR__ . '/../public',
+            ),
+        ),
+        'caching' => array(
+            'default' => array(
+                'cache'     => 'Filesystem',
+                'options' => array (
+                    'dir' => 'data/cache/assets'
+                ),
+            ),
+        ),
+    ),
     'router' => array(
         'routes' => array(
             'home' => array(
